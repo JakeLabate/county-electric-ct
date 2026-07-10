@@ -5,21 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>County Electric | Electrical Contractor in Bridgeport, CT | Since 1963</title>
 <meta name="description" content="County Electric Construction, Inc. is a full service residential, commercial and industrial electrical contractor serving the State of Connecticut since 1963. Call 203-367-7500.">
-<meta name="theme-color" content="#15171C">
+<meta name="theme-color" content="#1F3F66">
 <meta property="og:title" content="County Electric | Electrical Contractor in Bridgeport, CT | Since 1963">
 <meta property="og:description" content="County Electric Construction, Inc. is a full service residential, commercial and industrial electrical contractor serving the State of Connecticut since 1963. Call 203-367-7500.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="County Electric">
 <meta property="og:locale" content="en_US">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%23F5B800"/><path d="M19 3 9 18h5.5L12 29l11-15h-5.5L19 3z" fill="%2315171C"/></svg>'>
+<meta property="og:image" content="https://jakelabate.github.io/county-electric-ct/assets/brand/county-electric-logo.png">
+<link rel="icon" type="image/png" href="assets/brand/county-electric-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Chivo+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#15171C; --steel:#20232B; --paper:#F4F3EF; --card:#FFFFFF;
-  --line:#DBD8D0; --line-dark:#343845; --yellow:#F5B800; --yellow-deep:#DEA600;
-  --copper:#B06F2E; --text:#26282E; --muted:#5D6068; --text-inv:#ECEBE5; --muted-inv:#A6A9B1;
+  --ink:#1F3F66; --steel:#1B3557; --paper:#F5F6F8; --card:#FFFFFF;
+  --line:#DFE2E6; --line-dark:#2E4E79; --brand:#3E72B5; --brand-hover:#2C5A99;
+  --brand-light:#6E9FD1; --brand-deep:#2C5A99; --text:#292C33; --muted:#5D6169;
+  --text-inv:#F0F3F7; --muted-inv:#A5B4C9;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -29,7 +31,7 @@ img,svg{display:block}
 a{color:inherit}
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--yellow);color:var(--ink);
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--brand);color:#fff;
   padding:10px 16px;font-weight:600;text-decoration:none;border-radius:0 0 4px 0}
 .skip:focus{left:0}
 a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
@@ -37,6 +39,7 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
 h1,h2,h3,.phone-big,.pstat,.stat-v,.cbig{font-family:'Barlow Condensed',sans-serif;
   text-transform:uppercase;letter-spacing:.015em;line-height:1.02;margin:0}
 h1{font-size:clamp(2.7rem,6.5vw,4.6rem);font-weight:700}
+h1,h2{font-style:italic;padding-right:.1em}
 h2{font-size:clamp(1.85rem,3.6vw,2.55rem);font-weight:600;line-height:1.05}
 h3{font-size:1.28rem;font-weight:600;letter-spacing:.03em}
 p{margin:0 0 1em}
@@ -44,29 +47,31 @@ p:last-child{margin-bottom:0}
 .mono,.tag,.morelink,.pmeta,.stat-l,.qwho span,.role,.tyears,.clabel,.fhead,.affil,.qctx{
   font-family:'Chivo Mono',monospace}
 
-.tag{display:inline-flex;align-items:center;gap:9px;background:var(--yellow);color:var(--ink);
+.tag{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;
   font-size:.66rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;
   padding:6px 12px 6px 10px;border-radius:3px;margin-bottom:16px}
 .tag::before{content:"";width:7px;height:7px;border-radius:50%;flex:none;
-  box-shadow:inset 0 0 0 2px rgba(21,23,28,.8)}
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.85)}
 
 .btn{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.06em;
   font-weight:600;font-size:1.05rem;padding:13px 24px;border-radius:4px;display:inline-flex;
   align-items:center;gap:10px;text-decoration:none;border:1px solid transparent;
   transition:background-color .15s,border-color .15s,transform .15s}
-.btn-yellow{background:var(--yellow);color:var(--ink)}
-.btn-yellow:hover{background:var(--yellow-deep)}
+.btn-brand{background:var(--brand);color:#fff}
+.btn-brand:hover{background:var(--brand-hover)}
 .btn-ghost{border-color:var(--line-dark);color:var(--text-inv)}
-.btn-ghost:hover{border-color:#5b6072}
+.btn-ghost:hover{border-color:#4C6E9C}
 .btn-dark{background:var(--ink);color:var(--text-inv)}
 .btn-dark:hover{background:#2b2f39}
 .btnrow{display:flex;flex-wrap:wrap;gap:12px}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--text-inv);
-  border-bottom:1px solid var(--line-dark)}
+.site-header{position:sticky;top:0;z-index:50;background:#fff;color:var(--text);
+  border-bottom:1px solid var(--line)}
 .header-in{display:flex;align-items:center;gap:28px;height:72px;position:relative}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.lockup{height:40px;width:auto}
+.fmark{height:46px;width:auto}
 .brand-text{display:flex;flex-direction:column;line-height:1.05}
 .brand-name{font-family:'Barlow Condensed';font-weight:700;font-size:1.22rem;
   text-transform:uppercase;letter-spacing:.05em}
@@ -74,13 +79,13 @@ p:last-child{margin-bottom:0}
   text-transform:uppercase;color:var(--muted-inv)}
 .site-nav{margin-left:auto}
 .site-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
-.site-nav a{display:block;padding:9px 13px;text-decoration:none;color:var(--muted-inv);
+.site-nav a{display:block;padding:9px 13px;text-decoration:none;color:var(--muted);
   font-weight:500;font-size:.94rem;border-radius:4px}
-.site-nav a:hover{color:var(--text-inv)}
-.site-nav a.active{color:var(--ink);background:var(--yellow)}
+.site-nav a:hover{color:var(--text)}
+.site-nav a.active{color:#fff;background:var(--brand)}
 .header-cta{padding:10px 18px;font-size:.98rem}
-.nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line-dark);
-  border-radius:4px;padding:10px 11px;cursor:pointer;color:var(--text-inv)}
+.nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line);
+  border-radius:4px;padding:10px 11px;cursor:pointer;color:var(--text)}
 .bars{display:flex;flex-direction:column;gap:4px}
 .bars i{display:block;width:20px;height:2px;background:currentColor}
 
@@ -92,30 +97,30 @@ p:last-child{margin-bottom:0}
 .lede{color:var(--muted-inv);font-size:1.12rem;max-width:56ch;margin:20px 0 30px}
 .page-hero .lede{margin-bottom:0}
 .page-hero .container{padding-top:64px;padding-bottom:52px}
-.hazard{height:6px;background:repeating-linear-gradient(45deg,var(--yellow) 0 10px,var(--ink) 10px 20px)}
+.hazard{height:6px;background:repeating-linear-gradient(45deg,var(--brand) 0 10px,var(--ink) 10px 20px)}
 
-.plate{position:relative;background:#1A1D24;border:1px solid var(--line-dark);border-radius:8px;
+.plate{position:relative;background:#19304F;border:1px solid var(--line-dark);border-radius:8px;
   padding:26px 28px 16px;box-shadow:0 18px 44px rgba(0,0,0,.35)}
 .screw{position:absolute;width:9px;height:9px;border-radius:50%;
-  background:radial-gradient(circle at 35% 35%,#5c6170,#2a2d36)}
+  background:radial-gradient(circle at 35% 35%,#5A6E8C,#22344F)}
 .s1{top:9px;left:9px}.s2{top:9px;right:9px}.s3{bottom:9px;left:9px}.s4{bottom:9px;right:9px}
 .plate-title{font-family:'Barlow Condensed';font-weight:600;font-size:1.02rem;
-  letter-spacing:.07em;text-transform:uppercase;color:#EDEBE4;display:flex;align-items:center;
+  letter-spacing:.07em;text-transform:uppercase;color:#F0F3F7;display:flex;align-items:center;
   gap:10px;margin:0;padding-bottom:13px;border-bottom:1px solid var(--line-dark)}
-.plate-title::before{content:"";width:10px;height:10px;background:var(--yellow);flex:none}
+.plate-title::before{content:"";width:10px;height:10px;background:var(--brand);flex:none}
 .plate dl{margin:0}
 .prow{display:grid;grid-template-columns:88px 1fr;gap:14px;padding:10px 0;
   border-bottom:1px dashed var(--line-dark);align-items:baseline}
 .prow:last-child{border-bottom:0}
 .prow dt{font-family:'Chivo Mono';font-size:.64rem;letter-spacing:.17em;text-transform:uppercase;
-  color:#8C909B}
-.prow dd{margin:0;font-size:.9rem;color:#E7E5DE;font-weight:500}
+  color:#8FA2BC}
+.prow dd{margin:0;font-size:.9rem;color:#E9EDF3;font-weight:500}
 
 .statbar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-dark)}
 .stat{padding:22px 24px 28px;border-left:1px solid var(--line-dark)}
 .stat:first-child{border-left:0;padding-left:0}
 .stat-v{display:block;font-size:2rem;font-weight:600;color:var(--text-inv)}
-.stat-v .star{color:var(--yellow);font-size:.72em;position:relative;top:-2px}
+.stat-v .star{color:var(--brand-light);font-size:.72em;position:relative;top:-2px}
 .stat-l{display:block;margin-top:6px;font-size:.66rem;letter-spacing:.15em;
   text-transform:uppercase;color:var(--muted-inv)}
 
@@ -125,10 +130,10 @@ p:last-child{margin-bottom:0}
 .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
   margin-bottom:38px;flex-wrap:wrap}
 .morelink{font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;
-  color:var(--ink);border-bottom:2px solid var(--yellow);padding-bottom:3px;white-space:nowrap}
+  color:var(--ink);border-bottom:2px solid var(--brand);padding-bottom:3px;white-space:nowrap}
 .morelink:hover{border-color:var(--ink)}
-.diagline{width:100%;height:24px;stroke:#BBB7AC;stroke-width:1.5;fill:none}
-.diagline .fillnode{fill:var(--copper);stroke:none}
+.diagline{width:100%;height:24px;stroke:#B7BEC9;stroke-width:1.5;fill:none}
+.diagline .fillnode{fill:var(--brand-deep);stroke:none}
 
 .grid{display:grid;gap:20px}
 .tiles{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
@@ -136,8 +141,8 @@ p:last-child{margin-bottom:0}
   border-radius:8px;padding:24px}
 .tile{transition:border-color .15s,transform .15s}
 .tile:hover{border-color:var(--ink);transform:translateY(-2px)}
-.icobox{width:46px;height:46px;border-radius:6px;background:var(--yellow);display:flex;
-  align-items:center;justify-content:center;margin-bottom:16px;color:var(--ink)}
+.icobox{width:46px;height:46px;border-radius:6px;background:var(--brand);display:flex;
+  align-items:center;justify-content:center;margin-bottom:16px;color:#fff}
 .ico{width:27px;height:27px}
 .tile h3{margin-bottom:8px}
 .tile p{font-size:.95rem;color:var(--muted)}
@@ -147,9 +152,9 @@ p:last-child{margin-bottom:0}
 .pcard[hidden]{display:none}
 .pmeta{display:flex;justify-content:space-between;gap:12px;font-size:.64rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted)}
-.pmeta span:first-child{color:var(--copper);font-weight:500}
+.pmeta span:first-child{color:var(--brand-deep);font-weight:500}
 .pcard p{font-size:.95rem;color:var(--muted);flex:1}
-.pstat{font-size:1.35rem;font-weight:700;color:var(--copper);letter-spacing:.03em;
+.pstat{font-size:1.35rem;font-weight:700;color:var(--brand-deep);letter-spacing:.03em;
   border-top:1px dashed var(--line);padding-top:12px}
 
 .about-teaser{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -158,7 +163,7 @@ p:last-child{margin-bottom:0}
 .quoteband{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   padding:80px 0}
 .qwrap{max-width:820px}
-.qrule{width:52px;height:4px;background:var(--copper);margin-bottom:26px}
+.qrule{width:52px;height:4px;background:var(--brand-deep);margin-bottom:26px}
 blockquote{margin:0 0 22px;font-size:clamp(1.28rem,2.5vw,1.62rem);font-weight:500;line-height:1.42}
 .qwho{margin:0}
 .qwho span{display:block;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;
@@ -169,8 +174,8 @@ blockquote{margin:0 0 22px;font-size:clamp(1.28rem,2.5vw,1.62rem);font-weight:50
 .cta-in{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 .ctaband p{color:var(--muted-inv)}
 .phone-big{display:inline-block;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;
-  color:var(--yellow);text-decoration:none;margin-bottom:20px}
-.phone-big:hover{color:var(--yellow-deep)}
+  color:var(--brand-light);text-decoration:none;margin-bottom:20px}
+.phone-big:hover{color:#fff}
 
 /* about */
 .prose{max-width:760px}
@@ -179,9 +184,9 @@ blockquote{margin:0 0 22px;font-size:clamp(1.28rem,2.5vw,1.62rem);font-weight:50
 .tl{position:relative;margin-left:8px;padding:0 0 36px 34px;border-left:2px solid var(--line)}
 .tl:last-child{padding-bottom:4px}
 .tl::before{content:"";position:absolute;left:-8px;top:3px;width:12px;height:12px;
-  border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px var(--ink)}
+  border-radius:50%;background:var(--brand);box-shadow:0 0 0 2px var(--ink)}
 .tl .yr{font-family:'Chivo Mono';font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--copper)}
+  color:var(--brand-deep)}
 .tl h3{margin:6px 0 8px}
 .tl p{max-width:640px;color:var(--muted);font-size:.98rem}
 .memoriam{background:var(--ink);color:var(--text-inv);border-radius:8px;padding:38px 38px;
@@ -198,7 +203,7 @@ blockquote{margin:0 0 22px;font-size:clamp(1.28rem,2.5vw,1.62rem);font-weight:50
 .tgrid{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
 .tcard h3{margin-bottom:4px}
 .role{display:block;font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--copper);margin-bottom:10px}
+  color:var(--brand-deep);margin-bottom:10px}
 .tyears{display:inline-block;font-size:.66rem;letter-spacing:.12em;color:var(--muted);
   border:1px solid var(--line);border-radius:999px;padding:4px 10px;margin-bottom:10px}
 .tnote{font-size:.92rem;color:var(--muted)}
@@ -226,23 +231,23 @@ tr[hidden]{display:none}
 .groupwrap{margin-bottom:56px}
 .groupwrap:last-of-type{margin-bottom:0}
 .closer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;
-  background:var(--card);border:1px solid var(--line);border-left:4px solid var(--yellow);
+  background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);
   border-radius:8px;padding:26px 28px;margin-top:56px}
 .closer p{margin:0;max-width:56ch}
 
 /* testimonials */
 .qgrid{grid-template-columns:1fr;max-width:820px}
-.quotecard{border-top:3px solid var(--copper);padding:30px 32px}
+.quotecard{border-top:3px solid var(--brand-deep);padding:30px 32px}
 .qctx{display:block;font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;
   color:var(--muted);margin-bottom:14px}
 .quotecard blockquote{font-size:1.08rem;font-weight:400;line-height:1.55;margin-bottom:18px}
 .googlecard{background:var(--ink);color:var(--text-inv);border-radius:8px;padding:38px;
   display:flex;flex-wrap:wrap;align-items:center;gap:34px;margin-top:44px;max-width:820px}
 .gscore{font-family:'Barlow Condensed';font-weight:700;font-size:3.4rem;line-height:1;
-  color:var(--yellow)}
+  color:var(--brand)}
 .googlecard p{margin:0;color:var(--muted-inv)}
 .glinks{margin-left:auto;display:flex;flex-direction:column;gap:10px}
-.glinks .morelink{color:var(--text-inv);border-color:var(--yellow)}
+.glinks .morelink{color:var(--text-inv);border-color:var(--brand-light)}
 
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
@@ -251,9 +256,9 @@ tr[hidden]{display:none}
 .clabel{display:block;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
   color:var(--muted);margin-bottom:8px}
 .cbig{font-size:clamp(2rem,4.5vw,3rem);font-weight:700;color:var(--ink);text-decoration:none}
-.cbig:hover{color:var(--copper)}
+.cbig:hover{color:var(--brand-deep)}
 .cmed{font-size:1.12rem;font-weight:500;text-decoration:none;display:inline-block}
-a.cmed:hover{color:var(--copper)}
+a.cmed:hover{color:var(--brand-deep)}
 .cmethod .morelink{display:inline-block;margin-top:10px}
 .cstack{display:flex;flex-direction:column;gap:22px}
 .bidcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:28px}
@@ -275,13 +280,14 @@ a.cmed:hover{color:var(--copper)}
 .fbottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   border-top:1px solid var(--line-dark);padding-top:22px;padding-bottom:26px;font-size:.8rem}
 .fbottom p{margin:0}
-.fcredit a{color:var(--text-inv);text-decoration:none;border-bottom:1px solid var(--yellow)}
+.fcredit a{color:var(--text-inv);text-decoration:none;border-bottom:1px solid var(--brand-light)}
 .fcredit a:hover{border-color:var(--text-inv)}
 
 @media(max-width:940px){
-  .site-nav{display:none;position:absolute;top:100%;left:-24px;right:-24px;background:var(--ink);
-    border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);
+  .site-nav{display:none;position:absolute;top:100%;left:-24px;right:-24px;background:#fff;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
     padding:12px 24px 18px}
+  .lockup{height:30px}
   .site-header.nav-open .site-nav{display:block}
   .site-nav ul{flex-direction:column;gap:2px}
   .nav-toggle{display:block}
@@ -311,6 +317,8 @@ a.cmed:hover{color:var(--copper)}
   "alternateName": "County Electric",
   "description": "Full service residential, commercial and industrial electrical contractor serving the State of Connecticut since 1963.",
   "url": "https://www.county-electric.com",
+  "logo": "https://jakelabate.github.io/county-electric-ct/assets/brand/county-electric-logo.png",
+  "image": "https://jakelabate.github.io/county-electric-ct/assets/brand/county-electric-logo.png",
   "telephone": "+1-203-367-7500",
   "faxNumber": "+1-203-367-6865",
   "email": "debbie@countyelectric.org",
@@ -336,11 +344,11 @@ a.cmed:hover{color:var(--copper)}
 </script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="container header-in"><a class="brand" href="index.html"><svg class="mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="6" fill="#F5B800"/><path d="M20 4 10 19h5.5L13 30l11-15h-5.5L20 4z" fill="#15171C"/></svg><span class="brand-text"><span class="brand-name">County Electric</span><span class="brand-sub">Construction, Inc.</span></span></a><nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="index.html" class="active" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></nav><a class="btn btn-yellow header-cta" href="tel:+12033677500">203-367-7500</a><button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="vh">Menu</span></button></div></header>
+<a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="container header-in"><a class="brand" href="index.html"><img class="lockup" src="assets/brand/county-electric-lockup.png" alt="County Electric Construction, Inc."></a><nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="index.html" class="active" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></nav><a class="btn btn-brand header-cta" href="tel:+12033677500">203-367-7500</a><button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="vh">Menu</span></button></div></header>
 <main id="main">
-<section class="hero"><div class="container hero-grid"><div><span class="tag">Est. 1963 / Bridgeport, CT</span><h1>Powering Connecticut<br>since 1963</h1><p class="lede">County Electric Construction is a full service electrical contractor for residential, commercial and industrial work across the State of Connecticut. Family owned in Bridgeport and run by the second generation of Cortinas.</p><div class="btnrow"><a class="btn btn-yellow" href="portfolio.html">View our work</a><a class="btn btn-ghost" href="tel:+12033677500">Call 203-367-7500</a></div></div><aside class="plate" aria-label="Company facts"><span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span><p class="plate-title">Company nameplate</p><dl><div class="prow"><dt>Firm</dt><dd>County Electric Construction, Inc.</dd></div><div class="prow"><dt>Est.</dt><dd>April 10, 1963</dd></div><div class="prow"><dt>HQ</dt><dd>102 Central Ave, Bridgeport, CT 06607</dd></div><div class="prow"><dt>Service</dt><dd>Residential, commercial, industrial</dd></div><div class="prow"><dt>Area</dt><dd>State of Connecticut</dd></div><div class="prow"><dt>Lic.</dt><dd>CT 181307-E1 / 122227-E1</dd></div></dl></aside></div><div class="container"><div class="statbar"><div class="stat"><span class="stat-v">60+</span><span class="stat-l">Years in business</span></div><div class="stat"><span class="stat-v">2nd</span><span class="stat-l">Generation family owned</span></div><div class="stat"><span class="stat-v">19</span><span class="stat-l">Featured projects</span></div><div class="stat"><span class="stat-v">4.7<span class="star">&#9733;</span></span><span class="stat-l">Google rating</span></div></div></div><div class="hazard"></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="tag">Services</span><h2>What we do</h2></div><a class="morelink" href="services.html">All 11 services &#8594;</a></div><div class="grid tiles"><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7.5h6M9 12h6M9 16.5h3.5"/></svg></div><h3>Service Upgrades</h3><p>Bigger electrical services for commercial and industrial buildings that have outgrown their panels.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.8" r="1.7"/><circle cx="5" cy="19" r="1.7"/><circle cx="12" cy="19" r="1.7"/><circle cx="19" cy="19" r="1.7"/><path d="M12 6.6V11m0 0-6.1 6.4M12 11v6.2M12 11l6.1 6.4"/></svg></div><h3>High-End Distribution</h3><p>Large scale power distribution engineered with room to expand.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8" width="17" height="9.5" rx="1.5"/><path d="M6.5 17.5v2.3M17.5 17.5v2.3"/><path fill="currentColor" stroke="none" d="M13.4 9.4l-3.4 4.2h2L10.7 16.6l3.9-4.6h-2l.8-2.6z"/></svg></div><h3>Generator Installations</h3><p>Standby power for every application, from life safety systems to whole facility backup.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path fill="currentColor" stroke="none" d="M13.3 6.9 9 12.6h2.6l-1.1 4.5 4.6-5.9h-2.6l.8-4.3z"/></svg></div><h3>EV Charging</h3><p>Electric vehicle charging installations for homes and businesses.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2a6 6 0 0 0-3.9 10.6c.8.7 1.2 1.4 1.4 2.4h5c.2-1 .6-1.7 1.4-2.4A6 6 0 0 0 12 3.2z"/><path d="M9.7 19h4.6M10.6 21.4h2.8"/></svg></div><h3>LED Retrofitting</h3><p>Interior, exterior and warehouse scale conversions that cut energy and maintenance costs.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a5.5 5.5 0 0 1 5.5 5.5v3.6l1.6 2.6H4.9l1.6-2.6V9.5A5.5 5.5 0 0 1 12 4z"/><path d="M10.4 18.6a1.7 1.7 0 0 0 3.2 0"/></svg></div><h3>Fire Alarm Systems</h3><p>Complete fire alarm systems, installed to protect buildings and the people in them.</p></div></div></div></section><div class="container"><svg class="diagline" viewBox="0 0 800 24" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="12" x2="330" y2="12"/><circle cx="345" cy="12" r="4"/><line x1="358" y1="12" x2="392" y2="4"/><line x1="400" y1="12" x2="800" y2="12"/><circle class="fillnode" cx="400" cy="12" r="2.6"/></svg></div><section class="section alt"><div class="container"><div class="section-head"><div><span class="tag">Selected work</span><h2>Recent projects</h2></div><a class="morelink" href="portfolio.html">All 19 projects &#8594;</a></div><div class="grid pgrid"><article class="pcard" data-cat="ind"><div class="pmeta"><span>Distribution</span><span>Stratford, CT</span></div><h3>FedEx Logistics Center</h3><p>Ground up construction of a 368,000 square foot distribution center.</p><div class="pstat">368,000 SF</div></article><article class="pcard" data-cat="multires"><div class="pmeta"><span>Multi-Residential</span><span>Norwalk, CT</span></div><h3>10 Willard Road Apartments</h3><p>New construction: 219 apartments, extensive amenities and a five story parking garage.</p><div class="pstat">219 Units</div></article><article class="pcard" data-cat="retail"><div class="pmeta"><span>Auto Retail</span><span>Greenwich, CT</span></div><h3>Audi Greenwich</h3><p>New sales building with parking garage, plus renovation of the existing service building.</p><div class="pstat">22 Months</div></article><article class="pcard" data-cat="multires"><div class="pmeta"><span>Mixed Use</span><span>Bridgeport, CT</span></div><h3>Newfield Apartments</h3><p>A 1940s factory converted into 104 residences over ground floor retail.</p><div class="pstat">104 Units</div></article></div></div></section><section class="section"><div class="container about-teaser"><div><span class="tag">Since 1963</span><h2>A family shop that grew into a statewide contractor</h2></div><div><p>Al Cortina Sr. started the company from his home in 1963 and built it on referrals. Six decades later his sons Al Jr. and Michael run a Bridgeport headquarters, a deep bench of foremen, electricians and apprentices, and projects that range from residential service work to 368,000 square foot distribution centers.</p><a class="btn btn-dark" href="about.html">Our story</a></div></div></section><section class="quoteband"><div class="container qwrap"><div class="qrule"></div><blockquote>Their focus on teamwork, and dedication to put in the extra effort to complete the project is what separates them from their competitors.</blockquote><p class="qwho"><strong>Steven Parry</strong><span>Project Manager, CM&amp;B Construction</span></p></div></section><section class="ctaband"><div class="container cta-in"><div><span class="tag">Next project</span><h2>Put six decades on your job</h2><p>Quality work, competitive pricing and schedules met. Send plans for a price, or call the office and ask for what you need.</p></div><div><a class="phone-big" href="tel:+12033677500">203-367-7500</a><div class="btnrow"><a class="btn btn-yellow" href="mailto:debbie@countyelectric.org?subject=Project%20inquiry">Email the office</a><a class="btn btn-ghost" href="contact.html">Contact details</a></div></div></div></section>
+<section class="hero"><div class="container hero-grid"><div><span class="tag">Est. 1963 / Bridgeport, CT</span><h1>Powering Connecticut<br>since 1963</h1><p class="lede">County Electric Construction is a full service electrical contractor for residential, commercial and industrial work across the State of Connecticut. Family owned in Bridgeport and run by the second generation of Cortinas.</p><div class="btnrow"><a class="btn btn-brand" href="portfolio.html">View our work</a><a class="btn btn-ghost" href="tel:+12033677500">Call 203-367-7500</a></div></div><aside class="plate" aria-label="Company facts"><span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span><p class="plate-title">Company nameplate</p><dl><div class="prow"><dt>Firm</dt><dd>County Electric Construction, Inc.</dd></div><div class="prow"><dt>Est.</dt><dd>April 10, 1963</dd></div><div class="prow"><dt>HQ</dt><dd>102 Central Ave, Bridgeport, CT 06607</dd></div><div class="prow"><dt>Service</dt><dd>Residential, commercial, industrial</dd></div><div class="prow"><dt>Area</dt><dd>State of Connecticut</dd></div><div class="prow"><dt>Lic.</dt><dd>CT 181307-E1 / 122227-E1</dd></div></dl></aside></div><div class="container"><div class="statbar"><div class="stat"><span class="stat-v">60+</span><span class="stat-l">Years in business</span></div><div class="stat"><span class="stat-v">2nd</span><span class="stat-l">Generation family owned</span></div><div class="stat"><span class="stat-v">19</span><span class="stat-l">Featured projects</span></div><div class="stat"><span class="stat-v">4.7<span class="star">&#9733;</span></span><span class="stat-l">Google rating</span></div></div></div><div class="hazard"></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="tag">Services</span><h2>What we do</h2></div><a class="morelink" href="services.html">All 11 services &#8594;</a></div><div class="grid tiles"><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7.5h6M9 12h6M9 16.5h3.5"/></svg></div><h3>Service Upgrades</h3><p>Bigger electrical services for commercial and industrial buildings that have outgrown their panels.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.8" r="1.7"/><circle cx="5" cy="19" r="1.7"/><circle cx="12" cy="19" r="1.7"/><circle cx="19" cy="19" r="1.7"/><path d="M12 6.6V11m0 0-6.1 6.4M12 11v6.2M12 11l6.1 6.4"/></svg></div><h3>High-End Distribution</h3><p>Large scale power distribution engineered with room to expand.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8" width="17" height="9.5" rx="1.5"/><path d="M6.5 17.5v2.3M17.5 17.5v2.3"/><path fill="currentColor" stroke="none" d="M13.4 9.4l-3.4 4.2h2L10.7 16.6l3.9-4.6h-2l.8-2.6z"/></svg></div><h3>Generator Installations</h3><p>Standby power for every application, from life safety systems to whole facility backup.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path fill="currentColor" stroke="none" d="M13.3 6.9 9 12.6h2.6l-1.1 4.5 4.6-5.9h-2.6l.8-4.3z"/></svg></div><h3>EV Charging</h3><p>Electric vehicle charging installations for homes and businesses.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2a6 6 0 0 0-3.9 10.6c.8.7 1.2 1.4 1.4 2.4h5c.2-1 .6-1.7 1.4-2.4A6 6 0 0 0 12 3.2z"/><path d="M9.7 19h4.6M10.6 21.4h2.8"/></svg></div><h3>LED Retrofitting</h3><p>Interior, exterior and warehouse scale conversions that cut energy and maintenance costs.</p></div><div class="tile"><div class="icobox"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a5.5 5.5 0 0 1 5.5 5.5v3.6l1.6 2.6H4.9l1.6-2.6V9.5A5.5 5.5 0 0 1 12 4z"/><path d="M10.4 18.6a1.7 1.7 0 0 0 3.2 0"/></svg></div><h3>Fire Alarm Systems</h3><p>Complete fire alarm systems, installed to protect buildings and the people in them.</p></div></div></div></section><div class="container"><svg class="diagline" viewBox="0 0 800 24" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="12" x2="330" y2="12"/><circle cx="345" cy="12" r="4"/><line x1="358" y1="12" x2="392" y2="4"/><line x1="400" y1="12" x2="800" y2="12"/><circle class="fillnode" cx="400" cy="12" r="2.6"/></svg></div><section class="section alt"><div class="container"><div class="section-head"><div><span class="tag">Selected work</span><h2>Recent projects</h2></div><a class="morelink" href="portfolio.html">All 19 projects &#8594;</a></div><div class="grid pgrid"><article class="pcard" data-cat="ind"><div class="pmeta"><span>Distribution</span><span>Stratford, CT</span></div><h3>FedEx Logistics Center</h3><p>Ground up construction of a 368,000 square foot distribution center.</p><div class="pstat">368,000 SF</div></article><article class="pcard" data-cat="multires"><div class="pmeta"><span>Multi-Residential</span><span>Norwalk, CT</span></div><h3>10 Willard Road Apartments</h3><p>New construction: 219 apartments, extensive amenities and a five story parking garage.</p><div class="pstat">219 Units</div></article><article class="pcard" data-cat="retail"><div class="pmeta"><span>Auto Retail</span><span>Greenwich, CT</span></div><h3>Audi Greenwich</h3><p>New sales building with parking garage, plus renovation of the existing service building.</p><div class="pstat">22 Months</div></article><article class="pcard" data-cat="multires"><div class="pmeta"><span>Mixed Use</span><span>Bridgeport, CT</span></div><h3>Newfield Apartments</h3><p>A 1940s factory converted into 104 residences over ground floor retail.</p><div class="pstat">104 Units</div></article></div></div></section><section class="section"><div class="container about-teaser"><div><span class="tag">Since 1963</span><h2>A family shop that grew into a statewide contractor</h2></div><div><p>Al Cortina Sr. started the company from his home in 1963 and built it on referrals. Six decades later his sons Al Jr. and Michael run a Bridgeport headquarters, a deep bench of foremen, electricians and apprentices, and projects that range from residential service work to 368,000 square foot distribution centers.</p><a class="btn btn-dark" href="about.html">Our story</a></div></div></section><section class="quoteband"><div class="container qwrap"><div class="qrule"></div><blockquote>Their focus on teamwork, and dedication to put in the extra effort to complete the project is what separates them from their competitors.</blockquote><p class="qwho"><strong>Steven Parry</strong><span>Project Manager, CM&amp;B Construction</span></p></div></section><section class="ctaband"><div class="container cta-in"><div><span class="tag">Next project</span><h2>Put six decades on your job</h2><p>Quality work, competitive pricing and schedules met. Send plans for a price, or call the office and ask for what you need.</p></div><div><a class="phone-big" href="tel:+12033677500">203-367-7500</a><div class="btnrow"><a class="btn btn-brand" href="mailto:debbie@countyelectric.org?subject=Project%20inquiry">Email the office</a><a class="btn btn-ghost" href="contact.html">Contact details</a></div></div></div></section>
 </main>
-<footer class="site-footer"><div class="hazard"></div><div class="container fgrid"><div class="fcol fbrand"><svg class="mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="6" fill="#F5B800"/><path d="M20 4 10 19h5.5L13 30l11-15h-5.5L20 4z" fill="#15171C"/></svg><p class="fname">County Electric Construction, Inc.</p><p class="fblurb">Full service residential, commercial and industrial electrical contractor serving the State of Connecticut since 1963.</p></div><div class="fcol"><p class="fhead">Site</p><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="fcol"><p class="fhead">Contact</p><ul><li><a href="tel:+12033677500">203-367-7500</a></li><li>Fax 203-367-6865</li><li><a href="mailto:debbie@countyelectric.org">debbie@countyelectric.org</a></li><li><a href="https://www.google.com/maps/search/?api=1&amp;query=102+Central+Ave+Bridgeport+CT+06607" target="_blank" rel="noopener">102 Central Ave, Bridgeport, CT 06607</a></li></ul></div><div class="fcol"><p class="fhead">Elsewhere</p><ul><li><a href="https://www.facebook.com/county.electric.construction" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.linkedin.com/company/county-electric" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.instagram.com/county_electric_construction/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://business.brbc.org/activememberdirectory/Details/county-electric-construction-inc-4450020" target="_blank" rel="noopener">Bridgeport Regional Business Council</a></li><li><a href="https://g.page/r/CWrusga4QCd3EB0/review" target="_blank" rel="noopener">Review us on Google</a></li></ul></div></div><div class="container fbottom"><p>&copy; 2026 County Electric Construction, Inc. &middot; CT Lic. 181307-E1 / 122227-E1</p><p class="fcredit">Site by <a href="https://www.jakelabate.com" target="_blank" rel="noopener">Labate SEO</a></p></div></footer>
+<footer class="site-footer"><div class="hazard"></div><div class="container fgrid"><div class="fcol fbrand"><img class="fmark" src="assets/brand/county-electric-logo.png" alt="County Electric CE mark"><p class="fname">County Electric Construction, Inc.</p><p class="fblurb">Full service residential, commercial and industrial electrical contractor serving the State of Connecticut since 1963.</p></div><div class="fcol"><p class="fhead">Site</p><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="fcol"><p class="fhead">Contact</p><ul><li><a href="tel:+12033677500">203-367-7500</a></li><li>Fax 203-367-6865</li><li><a href="mailto:debbie@countyelectric.org">debbie@countyelectric.org</a></li><li><a href="https://www.google.com/maps/search/?api=1&amp;query=102+Central+Ave+Bridgeport+CT+06607" target="_blank" rel="noopener">102 Central Ave, Bridgeport, CT 06607</a></li></ul></div><div class="fcol"><p class="fhead">Elsewhere</p><ul><li><a href="https://www.facebook.com/county.electric.construction" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.linkedin.com/company/county-electric" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.instagram.com/county_electric_construction/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://business.brbc.org/activememberdirectory/Details/county-electric-construction-inc-4450020" target="_blank" rel="noopener">Bridgeport Regional Business Council</a></li><li><a href="https://g.page/r/CWrusga4QCd3EB0/review" target="_blank" rel="noopener">Review us on Google</a></li></ul></div></div><div class="container fbottom"><p>&copy; 2026 County Electric Construction, Inc. &middot; CT Lic. 181307-E1 / 122227-E1</p><p class="fcredit">Site by <a href="https://www.jakelabate.com" target="_blank" rel="noopener">Labate SEO</a></p></div></footer>
 <script>
 (function(){
   var t=document.querySelector('.nav-toggle');

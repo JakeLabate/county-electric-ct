@@ -307,6 +307,19 @@ a.cmed:hover{color:var(--brand-deep)}
 @media(prefers-reduced-motion:reduce){
   *{transition:none!important;scroll-behavior:auto!important}
 }
+/* project detail + card thumbs */
+.pthumb{width:calc(100% + 48px);max-width:none;margin:-24px -24px 16px;display:block;
+  aspect-ratio:16/10;object-fit:cover;border-radius:8px 8px 0 0;border-bottom:1px solid var(--line)}
+.pcard h3 a{text-decoration:none;color:inherit}
+.pcard h3 a:hover{color:var(--brand-deep)}
+.pjgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start}
+.gallery{display:grid;gap:20px}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
+.pjside{display:flex;flex-direction:column;gap:22px;position:sticky;top:96px}
+.prevnext{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  border-top:1px solid var(--line);margin-top:56px;padding-top:26px}
+@media(max-width:940px){.pjgrid{grid-template-columns:1fr;gap:32px}.pjside{position:static}}
 </style>
 <script type="application/ld+json">
 {
@@ -342,6 +355,7 @@ a.cmed:hover{color:var(--brand-deep)}
   ]
 }
 </script>
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="container header-in"><a class="brand" href="index.html"><img class="lockup" src="assets/brand/county-electric-lockup.png" alt="County Electric Construction, Inc."></a><nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html" class="active" aria-current="page">About</a></li><li><a href="team.html">Team</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></nav><a class="btn btn-brand header-cta" href="tel:+12033677500">203-367-7500</a><button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="vh">Menu</span></button></div></header>

@@ -1,0 +1,23 @@
+name: vendor-brand-assets
+on: [push]
+permissions:
+  contents: write
+jobs:
+  vendor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download brand assets from current site CDN
+        run: |
+          mkdir -p assets/brand
+          curl -sSL -o "assets/brand/county-electric-logo.svg" "https://cdn.prod.website-files.com/622fa7e7f563138da06751e0/6233a80626ab4da96a219dd2_County%20Electric.svg"
+          curl -sSL -o "assets/brand/county-electric-logo.png" "https://cdn.prod.website-files.com/622fa7e7f563138da06751e0/6255d42e42faeb6df23f6ce8_CountyElectricPNG.png"
+          curl -sSL -o "assets/brand/county-electric-lockup.png" "https://cdn.prod.website-files.com/622fa7e7f563138da06751e0/6252e543964a2b4a647bbfb1_Screen%20Shot%202022-04-10%20at%2010.11.56%20AM.png"
+          ls -la assets/brand
+      - name: Commit
+        run: |
+          git config user.name "asset-vendor"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets
+          git commit -m "Vendor County Electric brand assets from current site" || echo "nothing to commit"
+          git push
